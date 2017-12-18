@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/BasMols/template/issues"
   },
-  "homepage": "https://github.com/BasMols/template#readme"
+  "homepage": "https://github.com/BasMols/template#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1"
+  }
 }

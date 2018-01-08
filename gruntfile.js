@@ -6,7 +6,7 @@ module.exports = function(grunt) {
         cssmin: {
             minify: {
                 expand: true,
-                cwd: 'css/',
+                cwd: 'dev/css/',
                 src: ['*.css'],
                 dest: 'release/css/'
             }
@@ -30,42 +30,48 @@ module.exports = function(grunt) {
             dist: {
                 files: [{
                     expand: true,
-                    cwd: 'js/',
+                    cwd: 'dev/js/',
                     src: ['*.js'],
-                    dest: '.build/babel/'
+                    dest: 'build/babel/'
                 }]
             }
         },
-        // browserify: {
-        //     dist: {
-        //         expand: true,
-        //         cwd: 'build/babel/',
-        //         src: ['scripts.js'],
-        //         dest: 'build/ify/'
-        //
-        //     }
-        // },
         uglify: {
             options: {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
             build: {
                 expand: true,
-                cwd: '.build/babel/',
+                cwd: 'build/babel/',
                 src: ['*.js'],
                 dest: 'release/js/'
             }
+        },
+        copy: {
+            main: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'dev/',
+                        src: [
+                            'index.html',
+                            'img/',
+                            'html/'
+                        ],
+                        dest: 'release/'
+                    }
+                ],
+            },
         }
-
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-babel');
-    // grunt.loadNpmTasks('grunt-browserify');
 
     // Default task(s).
-    grunt.registerTask('default', ['cssmin','babel','uglify']);
+    grunt.registerTask('default', ['cssmin','jshint','babel','uglify','copy']);
 
 };

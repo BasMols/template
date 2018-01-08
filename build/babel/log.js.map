@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../dev/js/log.js"],"names":["log","line","console"],"mappings":";;;;;AAAA,IAAMA,MAAM,SAANA,GAAM,CAASC,IAAT,EAAc;AACtBC,YAAQF,GAAR,CAAYC,IAAZ;AACH,CAFD;;kBAIeD,G","file":"log.js","sourcesContent":["const log = function(line){\r\n    console.log(line);\r\n};\r\n\r\nexport default log;"]}

@@ -18,6 +18,14 @@
   },
   "homepage": "https://github.com/BasMols/template#readme",
   "devDependencies": {
-    "grunt": "^1.0.1"
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "grunt": "^1.0.1",
+    "grunt-babel": "^7.0.0",
+    "grunt-browserify": "^5.2.0",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-qunit": "^2.0.0",
+    "grunt-contrib-uglify": "^3.2.1"
   }
 }

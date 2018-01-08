@@ -32,7 +32,7 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: 'js/',
                     src: ['*.js'],
-                    dest: 'build/babel/'
+                    dest: '.build/babel/'
                 }]
             }
         },
@@ -51,7 +51,7 @@ module.exports = function(grunt) {
             },
             build: {
                 expand: true,
-                cwd: 'build/babel/',
+                cwd: '.build/babel/',
                 src: ['*.js'],
                 dest: 'release/js/'
             }
